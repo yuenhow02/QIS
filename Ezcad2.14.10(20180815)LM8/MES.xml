@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MES</name>
+    </assembly>
+    <members>
+        <member name="M:MES.MESClient.login(System.String,System.String,System.String,System.String)">
+            <summary>
+            员工登录接口
+            </summary>
+            <param name="username">员工账号</param>
+            <param name="password">员工密码</param>
+            <param name="factory">工厂代码</param>
+            <param name="stationId">工位代码</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.Inilogin(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="username">员工账号</param>
+            <param name="password">员工密码</param>
+            <param name="factory">工厂代码</param>
+            <param name="stationId">工位代码</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.toOperate">
+            <summary>
+            加载工序接口
+            </summary>
+            <returns>POD页面</returns>
+        </member>
+        <member name="M:MES.MESClient.snNumber(System.String)">
+            <summary>
+            进站、SN验证接口
+            </summary>
+            <param name="sn">产品条码</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.commit(System.String)">
+            <summary>
+            出站接口
+            </summary>
+            <param name="snNumber">产品条码</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.fileUpload(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            文件上传接口
+            </summary>
+            <param name="fileServer">文件服务器名称</param>
+            <param name="fileName">待上传文件名称</param>
+            <param name="filePath">待上传文件完整路径</param>
+            <param name="factory">工厂代码</param>
+            <param name="modelCode">数据模板名称</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.dataCollect(System.String)">
+            <summary>
+            数据上传接口（Json格式）
+            </summary>
+            <param name="data">待上传的数据（Json格式）</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.dataParaCollect(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime,System.String)">
+            <summary>
+            测试参数上传接口
+            </summary>
+            <param name="factoryId">工厂代码</param>
+            <param name="stationId">工位代码</param>
+            <param name="operationId">工序代码</param>
+            <param name="modelCode">数据模板名称</param>
+            <param name="type">类型</param>
+            <param name="typeId">类型编号</param>
+            <param name="Name">员工账号</param>
+            <param name="Sn">产品条码</param>
+            <param name="result">测试结果</param>
+            <param name="Qty">不良数</param>
+            <param name="TestTime">测试时间</param>
+            <param name="Para">测试参数（注意转译字符"\"）</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.DataToJson(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime,System.String)">
+            <summary>
+            将待上传的数据转化为Json格式
+            </summary>
+            <param name="factoryId">工厂代码</param>
+            <param name="stationId">工位代码</param>
+            <param name="operationId">工序代码</param>
+            <param name="modelCode">数据模板名称</param>
+            <param name="type">类型</param>
+            <param name="typeId">类型编号</param>
+            <param name="Name">员工账号</param>
+            <param name="Sn">产品条码</param>
+            <param name="result">测试结果</param>
+            <param name="Qty">不良数</param>
+            <param name="TestTime">测试时间</param>
+            <param name="path">上传文件的路径</param>
+            <returns>待上传的数据（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.snNumber_login(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            扫描产品条码
+            </summary>
+            <param name="username">员工账号</param>
+            <param name="password">员工密码</param>
+            <param name="factory">工厂代码</param>
+            <param name="stationId">工位代码</param>
+            <param name="Sn">产品条码</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.fileUpload_dataCollect(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime)">
+            <summary>
+            测试失败时上传文件
+            </summary>
+            <param name="fileServer">文件服务器名称</param>
+            <param name="fileName">待上传文件名称</param>
+            <param name="filePath">待上传文件完整路径</param>
+            <param name="factoryId">工厂代码</param>
+            <param name="stationId">工位代码</param>
+            <param name="operationId">工序代码</param>
+            <param name="modelCode">数据模板名称</param>
+            <param name="type">数据类型</param>
+            <param name="typeId">数据类型代码</param>
+            <param name="Name">员工账号</param>
+            <param name="Sn">产品条码</param>
+            <param name="result">测试结果</param>
+            <param name="Qty">不良数</param>
+            <param name="TestTime">测试时间</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.commit_fileUpload(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime)">
+            <summary>
+            测试成功时上传文件
+            </summary>
+            <param name="fileServer">文件服务器名称</param>
+            <param name="fileName">待上传文件名称</param>
+            <param name="filePath">待上传文件完整路径</param>
+            <param name="factoryId">工厂代码</param>
+            <param name="stationId">工位代码</param>
+            <param name="operationId">工序代码</param>
+            <param name="modelCode">数据模板名称</param>
+            <param name="type">数据类型</param>
+            <param name="typeId">数据类型代码</param>
+            <param name="Name">员工账号</param>
+            <param name="Sn">产品条码</param>
+            <param name="result">测试结果</param>
+            <param name="Qty">不良数</param>
+            <param name="TestTime">测试时间</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.commit_login_fileUpload(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime,System.String)">
+            <summary>
+            登录、上传文件并过站
+            </summary>
+            <param name="fileServer">服务器编号："d14dy"</param>
+            <param name="fileName">待上传文件名称</param>
+            <param name="filePath">待上传文件完整路径</param>
+            <param name="factoryId">工厂代码:"A963"</param>
+            <param name="stationId">工位代码</param>
+            <param name="operationId">工序代码</param>
+            <param name="modelCode">数据模板名称</param>
+            <param name="type">数据类型</param>
+            <param name="typeId">数据类型代码</param>
+            <param name="Name">员工账号</param>
+            <param name="Sn">产品条码</param>
+            <param name="result">测试结果</param>
+            <param name="Qty">不良数</param>
+            <param name="TestTime">测试时间</param>
+            <param name="Password">员工密码</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.FileUpload_Commit(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime,System.String)">
+            <summary>
+            作业完成，上传文档并过站
+            </summary>
+            <param name="FileServer">文件服务器名称</param>
+            <param name="FileName">待上传文件名称</param>
+            <param name="FilePath">待上传文件完整路径</param>
+            <param name="Factory">工厂代码</param>
+            <param name="StationId">工位代码</param>
+            <param name="OperationId">工序代码</param>
+            <param name="ModelCode">数据模板名称</param>
+            <param name="Type">数据类型</param>
+            <param name="TypeId">数据类型代码</param>
+            <param name="UserName">员工账号</param>
+            <param name="Sn">产品条码</param>
+            <param name="Result">测试结果</param>
+            <param name="Qty">不良数（值为0代表可以重新测试，1代表不能重新测试）</param>
+            <param name="TestTime">测试时间</param>
+            <param name="Password">员工密码</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+        <member name="M:MES.MESClient.DataCollect_Commit_jiguangGD(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            作业完成，上传数据并过站_光大激光
+            </summary>
+            <param name="Factory">工厂代码</param>
+            <param name="StationId">工位代码</param>
+            <param name="OperationId">工序代码</param>
+            <param name="ModelCode">数据模板名称</param>
+            <param name="Type">数据类型</param>
+            <param name="TypeId">数据类型代码</param>
+            <param name="UserName">员工账号</param>
+            <param name="Sn">产品条码</param>
+            <param name="Result">测试结果</param>
+            <param name="Qty">不良数（值为0代表可以重新测试，1代表不能重新测试）</param>
+            <param name="TestTime">测试时间</param>
+            <param name="Password">员工密码</param>
+            <param name="Speed">速度</param>
+            <param name="Power">功率</param>
+            <param name="Frequency">频率</param>
+            <param name="MinX">X最小坐标</param>
+            <param name="MaxX">X最大坐标</param>
+            <param name="MinY">Y最小坐标</param>
+            <param name="MaxY">Y最大坐标</param>
+            <param name="PrintDetail">标刻详情</param>
+            <returns>接口调用结果（Json格式）</returns>
+        </member>
+    </members>
+</doc>
